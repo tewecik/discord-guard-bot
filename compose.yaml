@@ -1,0 +1,21 @@
+services:
+  guard:
+    build: .
+    restart: unless-stopped
+    init: true
+    env_file: .env
+    environment:
+      DATA_DIR: /app/data
+    volumes:
+      - guard-data:/app/data
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 512m
+    stop_grace_period: 25s
+volumes:
+  guard-data:

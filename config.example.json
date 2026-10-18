@@ -1,0 +1,25 @@
+{
+  "mode": "observe",
+  "logChannelId": null,
+  "windowSeconds": 30,
+  "combinedLimit": 8,
+  "action": "strip",
+  "rules": {
+    "channels": { "enabled": true, "limit": 3, "weight": 2 },
+    "roles": { "enabled": true, "limit": 3, "weight": 2 },
+    "members": { "enabled": true, "limit": 3, "weight": 2 },
+    "permissions": { "enabled": true, "limit": 1, "weight": 8 },
+    "bots": { "enabled": true, "limit": 1, "weight": 8 },
+    "webhooks": { "enabled": true, "limit": 2, "weight": 4 },
+    "guild": { "enabled": true, "limit": 1, "weight": 8 },
+    "assets": { "enabled": true, "limit": 4, "weight": 1 },
+    "automod": { "enabled": true, "limit": 1, "weight": 8 },
+    "threads": { "enabled": true, "limit": 8, "weight": 1 }
+  },
+  "raid": { "enabled": true, "joins": 10, "windowSeconds": 15, "youngAccountHours": 72, "youngRatio": 0.6, "holdMinutes": 10 },
+  "spam": { "enabled": true, "messages": 7, "windowSeconds": 6, "duplicateLimit": 4, "mentionLimit": 6, "timeoutMinutes": 10, "blockInvites": false, "blockedDomains": [], "blockedExtensions": [".exe", ".scr", ".bat", ".cmd", ".ps1", ".vbs"] },
+  "lockdownChannelIds": [],
+  "backupIntervalMinutes": 60,
+  "backupRetention": 48,
+  "retentionDays": 30
+}
